@@ -22,6 +22,7 @@ import seedu.addressbook.commands.IncorrectCommand;
 import seedu.addressbook.commands.ListCommand;
 import seedu.addressbook.commands.ViewAllCommand;
 import seedu.addressbook.commands.ViewCommand;
+import seedu.addressbook.commands.EditCommand;
 import seedu.addressbook.data.exception.IllegalValueException;
 
 /**
@@ -98,6 +99,9 @@ public class Parser {
 
         case ExitCommand.COMMAND_WORD:
             return new ExitCommand();
+
+        case EditCommand.COMMAND_WORD:
+            return prepareEdit(arguments);
 
         case HelpCommand.COMMAND_WORD: // Fallthrough
         default:
@@ -214,6 +218,24 @@ public class Parser {
         }
     }
 
+    /**
+     * Parses arguments in the context of the edit command.
+     *
+     * @param args full command args string
+     * @return the prepared command
+     */
+    private Command prepareEdit(String args) {
+
+        try {
+            final int targetIndex = parseArgsAsDisplayedIndex(args);
+            return new EditCommand(targetIndex);
+        } catch (ParseException pe) {
+            return new IncorrectCommand(String.format(MESSAGE_INVALID_COMMAND_FORMAT,
+                    EditCommand.MESSAGE_USAGE));
+        } catch (NumberFormatException nfe) {
+            return new IncorrectCommand(MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
+        }
+    }
     /**
      * Parses the given arguments string as a single index number.
      *
