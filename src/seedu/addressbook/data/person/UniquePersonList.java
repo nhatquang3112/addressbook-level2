@@ -1,11 +1,6 @@
 package seedu.addressbook.data.person;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import seedu.addressbook.common.Utils;
 import seedu.addressbook.data.exception.DuplicateDataException;
@@ -135,6 +130,17 @@ public class UniquePersonList implements Iterable<Person> {
      */
     public void clear() {
         internalList.clear();
+    }
+
+    /**
+     * Sort all persons in list in alphabetical order, case insensitive.
+     */
+    public void sortAlphabet() {
+        Collections.sort(internalList, (firstPerson, secondPerson) -> {
+            String firstPersonName = firstPerson.getName().toString();
+            String secondPersonName = secondPerson.getName().toString();
+            return firstPersonName.compareToIgnoreCase(secondPersonName);
+        });
     }
 
     @Override

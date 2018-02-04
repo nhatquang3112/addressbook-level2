@@ -118,6 +118,13 @@ public class AddressBook {
     }
 
     /**
+     * Sort all persons in address book in alphabetical order, case insensitive
+     */
+    public void sortAlphabet() {
+        allPersons.sortAlphabet();
+    }
+
+    /**
      * Returns a new UniquePersonList of all persons in the address book at the time of the call.
      */
     public UniquePersonList getAllPersons() {
