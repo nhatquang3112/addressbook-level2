@@ -14,7 +14,7 @@ public class EditCommand extends Command {
 
     public static final String COMMAND_WORD = "edit";
 
-    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edit a person's information at specified index in the address book. "
+    public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edit a person's information at specified index in the address book.\n"
             + "Contact details can be marked private by prepending 'p' to the prefix.\n"
             + "Parameters: INDEX NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...\n"
             + "Example: " + COMMAND_WORD

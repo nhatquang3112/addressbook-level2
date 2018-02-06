@@ -23,7 +23,7 @@
   list
 
 ##########################################################
-# test add person command, setup state for futuer tests
+# test add person command, setup state for future tests
 ##########################################################
 
   # should catch invalid args format
@@ -138,6 +138,21 @@
 
   # listing indexes get updated on next request
   delete 1
+  list
+
+##########################################################
+# test edit command
+##########################################################
+
+  # should catch invalid args format
+  edit
+  edit 2
+
+  # should catch invalid index
+  edit 3 David p/123 e/david@gmail.com a/Singapore t/friends
+
+  # edit correct person
+  edit 2 David p/123 e/david@gmail.com a/Singapore t/friends
   list
 
 ##########################################################
