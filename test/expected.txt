@@ -304,15 +304,21 @@
 || Parameters: INDEX NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
 || Example: edit 1 John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
 || ===================================================
-|| Enter command: || [Command entered:  edit 3 David p/123 e/david@gmail.com a/Singapore t/friends]
+|| Enter command: || [Command entered:  edit 3 Alex p/123 e/alex@gmail.com a/Singapore t/friends]
 || The person index provided is invalid
 || ===================================================
-|| Enter command: || [Command entered:  edit 2 David p/123 e/david@gmail.com a/Singapore t/friends]
-|| Person's info edited: David Phone: 123 Email: david@gmail.com Address: Singapore Tags: [friends]
+|| Enter command: || [Command entered:  edit 2 Alex p/123 e/alex@gmail.com a/Singapore t/friends]
+|| Person's info edited: Alex Phone: 123 Email: alex@gmail.com Address: Singapore Tags: [friends]
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Betsy Choo Tags: [secretive]
-|| 	2. David Phone: 123 Email: david@gmail.com Address: Singapore Tags: [friends]
+|| 	2. Alex Phone: 123 Email: alex@gmail.com Address: Singapore Tags: [friends]
+|| 
+|| 2 persons listed!
+|| ===================================================
+|| Enter command: || [Command entered:  sortAlphabet]
+|| 	1. Alex Phone: 123 Email: alex@gmail.com Address: Singapore Tags: [friends]
+|| 	2. Betsy Choo Tags: [secretive]
 || 
 || 2 persons listed!
 || ===================================================

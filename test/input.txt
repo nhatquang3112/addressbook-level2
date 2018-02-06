@@ -149,11 +149,18 @@
   edit 2
 
   # should catch invalid index
-  edit 3 David p/123 e/david@gmail.com a/Singapore t/friends
+  edit 3 Alex p/123 e/alex@gmail.com a/Singapore t/friends
 
   # edit correct person
-  edit 2 David p/123 e/david@gmail.com a/Singapore t/friends
+  edit 2 Alex p/123 e/alex@gmail.com a/Singapore t/friends
   list
+
+##########################################################
+# test sort alphabet command
+##########################################################
+
+  # should sort persons in address book alphabetically, case insensitive
+  sortAlphabet
 
 ##########################################################
 # test clear command
