@@ -130,6 +130,7 @@ Format: `edit INDEX NAME [p]p/PHONE_NUMBER [p]e/EMAIL [p]a/ADDRESS [t/TAG]...`
 > be seen using the `viewall` command.
 > 
 > Persons can have any number of tags (including 0)
+>
 > Edit details of the person at the specified `INDEX`. 
   The index refers to the index number shown in the most recent listing.
 
